@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @actor_info["name"] %></title>
+  </head>
+  <body>
+    <h1><%= @actor_info["name"] %></h1>
+
+    <% @actor_data.each do |movie| %>
+    <li><a href="/movies/<%= movie["id"] %>"><%= movie["title"] %></a>,
+    <%= movie["year"] %>,
+    <%= movie["character"] %></li>
+    <% end %>
+  </body>
+</html>
